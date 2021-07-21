@@ -53,7 +53,7 @@
 			<port>${jboss-as.deploy.port}</port>
 			<username>${jboss-as.deploy.user}</username>
 			<password>${jboss-password}</password>
-			<filename>${project.build.finalName}</filename>
+			<filename>${project.artifactId}.${project.packaging}</filename>
 		    </configuration>
                         <executions>
                             
