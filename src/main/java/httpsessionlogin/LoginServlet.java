@@ -31,12 +31,10 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		Context ctx = null;
 		
-		try {
+		/*try {
 			
-			
-				session.setAttribute("userid", name);
-				out.print("Welcome, " + name + "!");
-			/*ctx = new InitialContext();			
+				
+			ctx = new InitialContext();			
 			DataSource myds=(DataSource)ctx.lookup("java:jboss/mysqlDS");			
 			
 			
@@ -55,10 +53,12 @@ public class LoginServlet extends HttpServlet {
 			} else {
 				out.print("Sorry, username or password error!");
 				request.getRequestDispatcher("login.html").include(request, response);
-			}*/
+			}
 		} catch (Exception e) {
 
-		}
+		}*/
+		session.setAttribute("userid", name);
+		out.print("Welcome, " + name + "!");
 		out.close();
 
 	}
