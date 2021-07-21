@@ -35,7 +35,7 @@
                         <version>7.4.Final</version>
                         <configuration>
                                 <force>true</force>
-                                <hostname>http://192.168.33.10</hostname>
+                                <hostname>192.168.33.10</hostname>
                                 <username>jboss-admin</username>
                                 <password>jboss-password</password>
                                 <filename>${project.artifactId}.${project.packaging}</filename>
