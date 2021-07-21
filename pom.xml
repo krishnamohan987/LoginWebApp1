@@ -35,10 +35,10 @@
                         <version>7.4.Final</version>
                         <configuration>
                                 <force>true</force>
-                                <hostname>192.168.33.10</hostname>
+                                <hostname>http://192.168.33.10</hostname>
                                 <username>jboss-admin</username>
                                 <password>jboss-password</password>
-                                <filename>${artifactId}.${packaging}</filename>
+                                <filename>${project.artifactId}.${project.packaging}</filename>
                                 <port>9990</port>
                         </configuration>
                         <executions>
