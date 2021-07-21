@@ -52,7 +52,7 @@
 			<hostname>${jboss-as.deploy.hostname}</hostname>
 			<port>${jboss-as.deploy.port}</port>
 			<username>${jboss-as.deploy.user}</username>
-			<password>jboss-password</password>
+			<password>${jboss-password}</password>
 			<filename>${project.build.finalName}</filename>
 		    </configuration>
                        <!-- <executions>
