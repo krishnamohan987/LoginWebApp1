@@ -33,41 +33,7 @@
 	</dependencies>
 	<build>
 		<finalName>LoginWebApp</finalName>
-		<plugins>
-		<plugin>
-		    <groupId>org.apache.maven.plugins</groupId>
-		    <artifactId>maven-war-plugin</artifactId>
-		    <version>2.3</version>
-		    <configuration>
-			<filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
-			<warName>${plugin.war.warName}</warName>
-		    </configuration>
-		</plugin>            
 
-		<!-- JBoss AS plugin to deploy the war. -->
-		<plugin>
-		    <groupId>org.jboss.as.plugins</groupId>
-		    <artifactId>jboss-as-maven-plugin</artifactId>
-		    <version>7.4.Final</version>
-		    <configuration>
-			<force>true</force>
-			<hostname>${jboss-as.deploy.hostname}</hostname>
-			<username>${jboss-as.deploy.user}</username>
-			<password>${jboss-as.deploy.pass.prod}</password>
-			<fileNames>
-			    <fileName>target/${plugin.war.warName}.war</fileName>
-			</fileNames>
-		    </configuration>
-		</plugin>
-    	</plugins>
 	</build>
-<distributionManagement>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>myjboss-uat</id>
-      <name>jbossserver</name>
-      <!--<url>scp://repo/maven2</url>
-      <layout>default</layout> -->
-    </repository>
-</distributionManagement>
+
 </project>
