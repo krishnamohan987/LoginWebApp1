@@ -12,7 +12,7 @@
     		<jboss-as.deploy.hostname>192.168.33.10</jboss-as.deploy.hostname>  <!-- Where to deploy. -->
 		<jboss-as.deploy.port>9999</jboss-as.deploy.port>
     		<jboss-as.deploy.user>jboss-admin</jboss-as.deploy.user>
-    		<jboss-as.deploy.pass>${myproject.deploy.pass.prod}</jboss-as.deploy.pass> 
+<!--   		<jboss-as.deploy.pass>${myproject.deploy.pass.prod}</jboss-as.deploy.pass> -->
 <!--		<plugin.war.warName>${project.build.finalName}</plugin.war.warName>-->
 	</properties>
 	
