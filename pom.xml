@@ -91,12 +91,9 @@
 	    	</plugin>
              </plugins>
 		<finalName>${project.artifactId}-1.0.0</finalName>
-		<resources>
-		<resource>
-		    <directory>/</directory>
-		    <filtering>true</filtering>
-		</resource>
-    </resources>
+		 <filters>
+      			<filter>pom.xml</filter>
+    		</filters>
         </build>
 	
 </project>
