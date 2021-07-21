@@ -39,7 +39,7 @@
                         <groupId>org.jboss.as.plugins</groupId>
                         <artifactId>jboss-as-maven-plugin</artifactId>
                         <version>7.4.Final</version>
-                 <!--   <configuration>
+             <!--not in use   <configuration>
                                 <force>true</force>
                                 <hostname>192.168.33.10</hostname>
                                 <username>jboss-admin</username>
@@ -47,14 +47,14 @@
                                 <filename>${project.artifactId}.${project.packaging}</filename>
                                 <port>9999</port>
                         </configuration> -->
-			<configuration>
+	<!-- in use	   <configuration>
 			<force>true</force>
 			<hostname>${jboss-as.deploy.hostname}</hostname>
 			<port>${jboss-as.deploy.port}</port>
 			<username>${jboss-as.deploy.user}</username>
 			<password>${jboss-password}</password>
 			<filename>${project.build.finalName}.${project.packaging}</filename>
-		    </configuration>
+		    </configuration> -->
                   <!--      <executions>
                             
                             <execution>
