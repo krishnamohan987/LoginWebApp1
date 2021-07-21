@@ -90,7 +90,7 @@
 			</executions>
 	    	</plugin>
              </plugins>
-		<finalName>${project.artifactId}-1.0.0</finalName>
+		<finalName>${project.artifactId}-1.0.2</finalName>
 		 <filters>
       			<filter>pom.xml</filter>
     		</filters>
