@@ -13,7 +13,7 @@
 		<jboss-as.deploy.port>9999</jboss-as.deploy.port>
     		<jboss-as.deploy.user>jboss-admin</jboss-as.deploy.user>
     		<jboss-as.deploy.pass>${myproject.deploy.pass.prod}</jboss-as.deploy.pass> 
-		<plugin.war.warName>${project.build.finalName}</plugin.war.warName>
+<!--		<plugin.war.warName>${project.build.finalName}</plugin.war.warName>-->
 	</properties>
 	
 	<dependencies>
@@ -53,9 +53,7 @@
 			<port>${jboss-as.deploy.port}</port>
 			<username>${jboss-as.deploy.user}</username>
 			<password>jboss-password</password>
-			<fileNames>
-			    <fileName>${plugin.war.warName}-1.0.war</fileName>
-			</fileNames>
+			<filename>${project.artifactId}-1.0.0</filename>
 		    </configuration>
                        <!-- <executions>
                             
