@@ -32,13 +32,17 @@ public class LoginServlet extends HttpServlet {
 		Context ctx = null;
 		
 		try {
-			ctx = new InitialContext();			
+			
+			
+				session.setAttribute("userid", name);
+				out.print("Welcome, " + name + "!");
+			/*ctx = new InitialContext();			
 			DataSource myds=(DataSource)ctx.lookup("java:jboss/mysqlDS");			
 			
-			/*
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://192.168.1.245:3306/test", "root", "");
-			*/
+			
+			//Class.forName("com.mysql.jdbc.Driver");
+			//Connection con = DriverManager.getConnection("jdbc:mysql://192.168.1.245:3306/test", "root", "");
+			
 			
 			Connection con=myds.getConnection();
 			Statement st = con.createStatement();
@@ -50,7 +54,7 @@ public class LoginServlet extends HttpServlet {
 				out.print("Welcome, " + name + "!");
 			} else {
 				out.print("Sorry, username or password error!");
-				request.getRequestDispatcher("login.html").include(request, response);
+				request.getRequestDispatcher("login.html").include(request, response);*/
 			}
 		} catch (Exception e) {
 
