@@ -20,7 +20,7 @@ public class ProfileServlet extends HttpServlet {
         String name=(String)session.getAttribute("userid");  
           
         out.print("Hello, "+name+" Welcome to Profile"); 
-        System.out.println("=========WelCome Mr/Ms."+name+"============");
+        System.out.println("=========WelCome Mr/Ms."+name+"============@@@@@@@@@@@@@@@@@@@@@@@@");
         }  
         else{  
             out.print("Please login first");  
