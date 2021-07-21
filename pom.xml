@@ -61,5 +61,14 @@
 		</plugin>
     	</plugins>
 	</build>
-
+<distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>myjboss-uat</id>
+      <name>jbossserver</name>
+      <!--<url>scp://repo/maven2</url>
+      <layout>default</layout> -->
+    </repository>
+    ...
+</distributionManagement>
 </project>
