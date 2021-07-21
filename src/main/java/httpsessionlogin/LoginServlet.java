@@ -59,7 +59,7 @@ public class LoginServlet extends HttpServlet {
 		}*/
 		session.setAttribute("userid", name);
 		out.print("Welcome, " + name + "!");
-		out.close();
+		//out.close();
 
 	}
 
