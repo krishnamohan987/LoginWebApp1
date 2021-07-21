@@ -8,13 +8,13 @@
 	<name>LoginWebApp Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
-	<properties>
-    		<jboss-as.deploy.hostname>192.168.33.10</jboss-as.deploy.hostname>  <!-- Where to deploy. -->
+<!--	<properties>
+    		<jboss-as.deploy.hostname>192.168.33.10</jboss-as.deploy.hostname>  
 		<jboss-as.deploy.port>9999</jboss-as.deploy.port>
     		<jboss-as.deploy.user>jboss-admin</jboss-as.deploy.user>
-<!--   		<jboss-as.deploy.pass>${myproject.deploy.pass.prod}</jboss-as.deploy.pass> -->
-<!--		<plugin.war.warName>${project.build.finalName}</plugin.war.warName>-->
-	</properties>
+   		<jboss-as.deploy.pass>${myproject.deploy.pass.prod}</jboss-as.deploy.pass> 
+		<plugin.war.warName>${project.build.finalName}</plugin.war.warName>
+	</properties> -->
 	
 	<dependencies>
 		<dependency>
@@ -48,14 +48,14 @@
                                 <filename>${project.artifactId}.${project.packaging}</filename>
                                 <port>9999</port>
                         </configuration> -->
-	<!-- in use	   <configuration>
+		   <configuration>
 			<force>true</force>
 			<hostname>${jboss-as.deploy.hostname}</hostname>
 			<port>${jboss-as.deploy.port}</port>
 			<username>${jboss-as.deploy.user}</username>
 			<password>${jboss-password}</password>
 			<filename>${project.build.finalName}.${project.packaging}</filename>
-		    </configuration> -->
+		    </configuration> 
                   <!--      <executions>
                             
                             <execution>
