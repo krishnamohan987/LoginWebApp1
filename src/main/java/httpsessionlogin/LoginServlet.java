@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 		
 		try {
 			//temp statemnt
-			System.out.println("came till here @@@@@@@@@")
+			System.out.println("came till here @@@@@@@@@");
 			session.setAttribute("userid", name);
 				
 			ctx = new InitialContext();			
