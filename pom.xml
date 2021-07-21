@@ -53,9 +53,9 @@
 			<port>${jboss-as.deploy.port}</port>
 			<username>${jboss-as.deploy.user}</username>
 			<password>${jboss-password}</password>
-			<filename>${project.artifactId}.${project.packaging}</filename>
+			<filename>${project.build.finalName}.${project.packaging}</filename>
 		    </configuration>
-                        <executions>
+                  <!--      <executions>
                             
                             <execution>
                                 <id>deploy</id>
@@ -73,7 +73,7 @@
                                     <ignoreMissingDeployment>true</ignoreMissingDeployment>
                                 </configuration>
                             </execution>
-                        </executions> 
+                        </executions> -->
                     </plugin>
 		    <plugin>
 			<groupId>org.apache.maven.plugins</groupId>
