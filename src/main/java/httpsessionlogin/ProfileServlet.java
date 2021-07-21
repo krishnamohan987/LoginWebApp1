@@ -12,7 +12,8 @@ public class ProfileServlet extends HttpServlet {
                       throws ServletException, IOException {  
         response.setContentType("text/html");  
         PrintWriter out=response.getWriter();  
-        request.getRequestDispatcher("link.html").include(request, response);  
+        //commenting temperorily for testing
+        //request.getRequestDispatcher("link.html").include(request, response);  
           
         HttpSession session=request.getSession(false);  
         if(session!=null){  
