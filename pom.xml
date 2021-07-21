@@ -55,9 +55,9 @@
                                 </goals>
                                 <configuration>
                                     <ignoreMissingDeployment>true</ignoreMissingDeployment>
-                                </configuration> -->
+                                </configuration>
                             </execution>
-                        </executions>
+                        </executions> -->
                     </plugin>
                 </plugins>
         </build> 
