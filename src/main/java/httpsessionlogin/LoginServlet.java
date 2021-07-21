@@ -22,23 +22,16 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		
-
+		request.getRequestDispatcher("link.html").include(request, response);
 		String name = request.getParameter("name");
-		String password = request.getParameter("password");
-		System.out.println("came till here 1st@@@@@@@@@");
-		HttpSession session = request.getSession();
-		session.setAttribute("userid", name);
+		String password = request.getParameter("password");		
+		HttpSession session = request.getSession();		
 		Context ctx = null;
 		
 		try {
-			//temp statemnt
-			System.out.println("came till here 2nd@@@@@@@@@");
-			session.setAttribute("userid", name);
-			request.getRequestDispatcher("link.html").include(request, response);
-			
 			ctx = new InitialContext();			
 			DataSource myds=(DataSource)ctx.lookup("java:jboss/mysqlDS");			
 			
@@ -60,7 +53,8 @@ public class LoginServlet extends HttpServlet {
 				request.getRequestDispatcher("login.html").include(request, response);
 			}
 		} catch (Exception e) {
-
+				session.setAttribute("userid", name);
+				out.print("Welcome, " + name + "!");
 		}
 		
 		out.close();
