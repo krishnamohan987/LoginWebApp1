@@ -26,6 +26,7 @@
 		</dependency>
 
 	</dependencies>
+	<!--
 	<build>
 		<finalName>LoginWebApp</finalName>
 		<plugins>
@@ -54,6 +55,43 @@
 		</plugin>
     	</plugins>
 
-	</build>
+	</build> -->
+	<build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jboss.as.plugins</groupId>
+                        <artifactId>jboss-as-maven-plugin</artifactId>
+                        <version>7.4.Final</version>
+                        <configuration>
+                                <force>true</force>
+                                <hostname>192.168.33.10</hostname>
+                                <username>jboss-admin</username>
+                                <password>jboss-password</password>
+                                <filename>${artifactId}.${packaging}</filename>
+                                <port>9990</port>
+                        </configuration>
+                        <executions>
+                            <!-- Deploy the application on install -->
+                            <execution>
+                                <id>deploy</id>
+                                <goals>
+                                    <goal>deploy</goal>
+                                </goals>
+                            </execution>
+
+                            <execution>
+                                <id>undeploy</id>
+                                <goals>
+                                    <goal>undeploy</goal>
+                                </goals>
+                                <configuration>
+                                    <ignoreMissingDeployment>true</ignoreMissingDeployment>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+        </build>
+
 
 </project>
