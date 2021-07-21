@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		request.getRequestDispatcher("link.html").include(request, response);
+		
 
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
@@ -37,7 +37,8 @@ public class LoginServlet extends HttpServlet {
 			//temp statemnt
 			System.out.println("came till here 2nd@@@@@@@@@");
 			session.setAttribute("userid", name);
-				
+			request.getRequestDispatcher("link.html").include(request, response);
+			
 			ctx = new InitialContext();			
 			DataSource myds=(DataSource)ctx.lookup("java:jboss/mysqlDS");			
 			
