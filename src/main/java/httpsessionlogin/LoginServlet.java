@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 		
 		try{
 			session.setAttribute("userid", name);
-			System.out.println("parameter::"+name+"sessionvalue::"+session.getAttribute("userid", name));
+			System.out.println("parameter::"+name+"sessionvalue::"+(String)session.getAttribute("userid", name));
 			out.print("Welcome, " + name + "!");
 		}
 		catch (Exception e){
