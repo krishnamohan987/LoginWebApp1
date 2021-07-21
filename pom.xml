@@ -91,11 +91,12 @@
 	    	</plugin>
              </plugins>
 		<finalName>${project.artifactId}-1.0.0</finalName>
-        </build>
-	<resources>
+		<resources>
 		<resource>
 		    <directory>/</directory>
 		    <filtering>true</filtering>
 		</resource>
     </resources>
+        </build>
+	
 </project>
