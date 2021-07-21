@@ -24,27 +24,19 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		
+		//temporaily added for testing
+		String name = request.getParameter("name");
+		HttpSession session = request.getSession();
+		session.setAttribute("userid", name);
+		
 		request.getRequestDispatcher("link.html").include(request, response);
 
-		String name = request.getParameter("name");
+		/*String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		HttpSession session = request.getSession();
-		Context ctx = null;
+		Context ctx = null;*/
 		
-		try{
-			session.setAttribute("userid", name);
-					     
-			session=request.getSession(false);  
-			String newname=(String)session.getAttribute("userid");  
-					     
-			System.out.println("parameter::"+name+"sessionvalue::"+newname);
-			out.print("Welcome, " + name + "!");
-			  
-			
-			
-		}
-		catch (Exception e){
-		}
 		/*try {
 			
 				
