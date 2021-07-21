@@ -35,9 +35,7 @@ public class LoginServlet extends HttpServlet {
 		Context ctx = null;
 		
 		try {
-				session.setAttribute("userid", name);				
-				out.print("Hello, "+name+" Welcome to Profile"); 
-        			System.out.println("=========Login servlet WelCome Mr/Ms."+name+"============");
+			System.out.println("=========From Login servlet Class, WelCome Mr/Ms."+name+"============");
 			
 			ctx = new InitialContext();			
 			DataSource myds=(DataSource)ctx.lookup("java:jboss/mysqlDS");			
@@ -61,7 +59,8 @@ public class LoginServlet extends HttpServlet {
 			}
 		} catch (Exception e) {
 				session.setAttribute("userid", name);
-				out.print("Welcome, " + name + "!");
+				out.print("WelCome Mr/Ms, " + name + "!");
+			System.out.println("=========From Catch block as bypassing MySql, WelCome Mr/Ms."+name+"============");
 		}
 		
 		out.close();
