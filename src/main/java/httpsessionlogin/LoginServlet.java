@@ -28,12 +28,14 @@ public class LoginServlet extends HttpServlet {
 
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
+		System.out.println("came till here 1st@@@@@@@@@");
 		HttpSession session = request.getSession();
+		session.setAttribute("userid", name);
 		Context ctx = null;
 		
 		try {
 			//temp statemnt
-			System.out.println("came till here @@@@@@@@@");
+			System.out.println("came till here 2nd@@@@@@@@@");
 			session.setAttribute("userid", name);
 				
 			ctx = new InitialContext();			
