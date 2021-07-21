@@ -33,8 +33,14 @@ public class LoginServlet extends HttpServlet {
 		
 		try{
 			session.setAttribute("userid", name);
-			System.out.println("parameter::"+name+"sessionvalue::"+(String)session.getAttribute("userid", name));
+			HttpSession session=request.getSession(false);  
+			if(session!=null){  
+			String newname=(String)session.getAttribute("userid");  
+			System.out.println("parameter::"+name+"sessionvalue::"+newname);
 			out.print("Welcome, " + name + "!");
+			}  
+			
+			
 		}
 		catch (Exception e){
 		}
