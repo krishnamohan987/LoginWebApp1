@@ -31,6 +31,13 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		Context ctx = null;
 		
+		try{
+			session.setAttribute("userid", name);
+			System.out.println("parameter::"+name+"sessionvalue::"+session.getAttribute("userid", name));
+			out.print("Welcome, " + name + "!");
+		}
+		catch (Exception e){
+		}
 		/*try {
 			
 				
@@ -57,9 +64,8 @@ public class LoginServlet extends HttpServlet {
 		} catch (Exception e) {
 
 		}*/
-		session.setAttribute("userid", name);
-		out.print("Welcome, " + name + "!");
-		//out.close();
+		
+		out.close();
 
 	}
 
