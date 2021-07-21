@@ -25,13 +25,13 @@
 			<version>4.10</version>
 		</dependency>
 	</dependencies>
-<!--	<build>
+	<build>
                 <plugins>
                     <plugin>
                         <groupId>org.jboss.as.plugins</groupId>
                         <artifactId>jboss-as-maven-plugin</artifactId>
                         <version>7.4.Final</version>
-                        <configuration>
+                 <!--   <configuration>
                                 <force>true</force>
                                 <hostname>192.168.33.10</hostname>
                                 <username>jboss-admin</username>
@@ -55,10 +55,10 @@
                                 </goals>
                                 <configuration>
                                     <ignoreMissingDeployment>true</ignoreMissingDeployment>
-                                </configuration>
+                                </configuration> -->
                             </execution>
                         </executions>
                     </plugin>
                 </plugins>
-        </build> -->
+        </build> 
 </project>
