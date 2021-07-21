@@ -14,20 +14,18 @@
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 		</dependency>
-		<!--<dependency>
+		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.30</version>
-		</dependency>-->
-		<!--<dependency>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.10</version>
-		</dependency>-->
-
+		</dependency>
 	</dependencies>
-
-	<build>
+<!--	<build>
                 <plugins>
                     <plugin>
                         <groupId>org.jboss.as.plugins</groupId>
@@ -42,7 +40,7 @@
                                 <port>9999</port>
                         </configuration>
                         <executions>
-                            <!-- Deploy the application on install -->
+                            
                             <execution>
                                 <id>deploy</id>
                                 <goals>
@@ -62,7 +60,5 @@
                         </executions>
                     </plugin>
                 </plugins>
-        </build>
-
-
+        </build> -->
 </project>
