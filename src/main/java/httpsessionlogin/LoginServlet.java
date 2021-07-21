@@ -25,13 +25,20 @@ public class LoginServlet extends HttpServlet {
 		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		
 		request.getRequestDispatcher("link.html").include(request, response);
+		
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");		
-		HttpSession session = request.getSession();		
+		HttpSession session = request.getSession();	
+		
 		Context ctx = null;
 		
 		try {
+				session.setAttribute("userid", name);				
+				out.print("Hello, "+name+" Welcome to Profile"); 
+        			System.out.println("=========Login servlet WelCome Mr/Ms."+name+"============");
+			
 			ctx = new InitialContext();			
 			DataSource myds=(DataSource)ctx.lookup("java:jboss/mysqlDS");			
 			
