@@ -39,6 +39,7 @@
                         <groupId>org.jboss.as.plugins</groupId>
                         <artifactId>jboss-as-maven-plugin</artifactId>
                         <version>7.4.Final</version>
+			<inherited>true</inherited>
 			
              <!--not in use   <configuration>
                                 <force>true</force>
