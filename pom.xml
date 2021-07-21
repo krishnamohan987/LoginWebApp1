@@ -26,36 +26,7 @@
 		</dependency>
 
 	</dependencies>
-	<!--
-	<build>
-		<finalName>LoginWebApp</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-help-plugin</artifactId>
-				<version>3.1.0</version>
-				<executions>
-				    <execution>
-					<id>show-profiles</id>
-					<phase>compile</phase>
-					<goals>
-					    <goal>active-profiles</goal>
-					</goals>
-				    </execution>
-				</executions>
-		    </plugin>
-		<!-- JBoss AS plugin to deploy the war. -->
-		<!-- <plugin>
-			    <groupId>org.jboss.as.plugins</groupId>
-			    <artifactId>jboss-as-maven-plugin</artifactId>
-			    <version>7.4.Final</version>
-			    <configuration>
-				<skip>true</skip>
-			    </configuration>
-		</plugin> 
-    	</plugins>
 
-	</build> -->
 	<build>
                 <plugins>
                     <plugin>
