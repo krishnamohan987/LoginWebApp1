@@ -24,28 +24,24 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		
-		//temporaily added for testing
-		String name = request.getParameter("name");
-		HttpSession session = request.getSession();
-		session.setAttribute("userid", name);
-		
 		request.getRequestDispatcher("link.html").include(request, response);
 
-		/*String name = request.getParameter("name");
+		String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		HttpSession session = request.getSession();
-		Context ctx = null;*/
+		Context ctx = null;
 		
-		/*try {
-			
+		try {
+			//temp statemnt
+			System.out.println("came till here @@@@@@@@@")
+			session.setAttribute("userid", name);
 				
 			ctx = new InitialContext();			
 			DataSource myds=(DataSource)ctx.lookup("java:jboss/mysqlDS");			
 			
 			
-			//Class.forName("com.mysql.jdbc.Driver");
-			//Connection con = DriverManager.getConnection("jdbc:mysql://192.168.1.245:3306/test", "root", "");
+			////Class.forName("com.mysql.jdbc.Driver");
+			////Connection con = DriverManager.getConnection("jdbc:mysql://192.168.1.245:3306/test", "root", "");
 			
 			
 			Connection con=myds.getConnection();
@@ -62,7 +58,7 @@ public class LoginServlet extends HttpServlet {
 			}
 		} catch (Exception e) {
 
-		}*/
+		}
 		
 		out.close();
 
