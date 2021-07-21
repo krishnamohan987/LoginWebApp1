@@ -54,8 +54,8 @@ public class LoginServlet extends HttpServlet {
 				out.print("Welcome, " + name + "!");
 			} else {
 				out.print("Sorry, username or password error!");
-				request.getRequestDispatcher("login.html").include(request, response);*/
-			}
+				request.getRequestDispatcher("login.html").include(request, response);
+			}*/
 		} catch (Exception e) {
 
 		}
