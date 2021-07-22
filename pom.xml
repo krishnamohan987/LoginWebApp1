@@ -49,14 +49,14 @@
                                 <filename>${project.artifactId}.${project.packaging}</filename>
                                 <port>9999</port>
                         </configuration> -->
-	<!--	   <configuration>
+		   <configuration>
 			<force>true</force>
 			<hostname>${jboss-as.deploy.hostname}</hostname>
 			<port>${jboss-as.deploy.port}</port>
 			<username>${jboss-as.deploy.user}</username>
 			<password>${jboss-password}</password>
 			<filename>${project.build.finalName}.${project.packaging}</filename>
-		    </configuration> -->
+		    </configuration> 
                   <!--      <executions>
                             
                             <execution>
